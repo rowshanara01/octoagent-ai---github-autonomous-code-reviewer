@@ -23,4 +23,4 @@ OctoAgent AI is an autonomous multi-agent code review platform for GitHub pull r
 - **SDK:** `docker`
 - **Port:** `7860`
 - **Environment Variables Required:**
-  - `GEMINI_API_KEY`: Your Google Gemini API Key (Set this in **Settings → Variables and Secrets → Secrets** on Hugging Face).
+  - `GEMINI_API_KEY`: Your Google Gemini API Key (Set this in **Settings → Variables and Secrets → Secrets** on Hugging Face.
