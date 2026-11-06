@@ -1,0 +1,8 @@
+{
+  "name": "OctoAgent AI - GitHub Autonomous Code Reviewer",
+  "description": "Multi-agent autonomous AI code review platform for GitHub repositories and pull requests with deep security, performance, and architecture audits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
