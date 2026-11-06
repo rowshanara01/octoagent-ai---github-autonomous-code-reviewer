@@ -12,7 +12,7 @@ pinned: false
 
 OctoAgent AI is an autonomous multi-agent code review platform for GitHub pull requests and repositories powered by Gemini 3.8 Flash.
 
-## Features ##
+#### Features ####
 - **Multi-Agent Review Swarm:** SecOps Specialist (SAST & OWASP), Performance Architect (Complexity & Leaks), Clean Code Lead, and QA Specialist.
 - **GitHub PR Integration:** Reviews public and private GitHub pull requests, commits, and single files.
 - **1-Click GitHub Comments:** Posts review verdicts (`APPROVE`, `REQUEST_CHANGES`) and inline ````suggestion```` patches directly back to GitHub.
