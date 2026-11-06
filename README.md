@@ -8,7 +8,7 @@ app_port: 7860
 pinned: false
 ---
 
-# OctoAgent AI — Autonomous Multi-Agent GitHub Code Reviewer #
+#### OctoAgent AI — Autonomous Multi-Agent GitHub Code Reviewer ####
 
 OctoAgent AI is an autonomous multi-agent code review platform for GitHub pull requests and repositories powered by Gemini 3.8 Flash.
 
