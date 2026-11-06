@@ -19,7 +19,7 @@ OctoAgent AI is an autonomous multi-agent code review platform for GitHub pull r
 - **Automated Test Generation:** Generates runnable test suites (Vitest/Jest/PyTest).
 - **Interactive Remediation Chat:** Ask questions and request refactorings from the Review Lead.
 
-#### Hugging Face Spaces Deployment Configuration ##
+#### Hugging Face Spaces Deployment Configuration ####
 - **SDK:** `docker`
 - **Port:** `7860`
 - **Environment Variables Required:**
