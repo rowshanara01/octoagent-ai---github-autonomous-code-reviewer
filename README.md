@@ -74,7 +74,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 
 ---
 
-## Tech Stack
+#### Tech Stack
 - **Language Breakdown:** TypeScript (`89.9%`), JavaScript (`9.3%`), HTML/CSS/Docker (`0.8%`)
 - **AI Engine:** Google Gemini (`GEMINI_API_KEY` via `@google/genai`)
 - **Frontend:** React, Vite, Tailwind CSS
