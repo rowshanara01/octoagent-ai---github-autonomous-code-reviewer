@@ -52,7 +52,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 - **Issue:** Local development and AI Studio previews bind to port `3000`, whereas Hugging Face Spaces (`sdk: docker`) strictly routes external traffic to `app_port: 7860` and runs containers under an unprivileged non-root UID (`1000`). Hardcoded ports or `localhost`-only bindings caused **502 / Space Unhealthy** startup failures.
 - **Solution:** Standardized the server entrypoint to bind dynamically via `Number(process.env.PORT) || 7860` on host `0.0.0.0`, declared `app_port: 7860` in the Hugging Face YAML frontmatter, and aligned the `Dockerfile` `EXPOSE` and startup command for zero-config container booting.
 
-### 2. GitHub PR Inline Comment `422 Unprocessable Entity` & Diff Line Drift
+#### 2. GitHub PR Inline Comment `422 Unprocessable Entity` & Diff Line Drift
 - **Issue:** GitHub's Pull Request Review API rejects inline comments (`POST /repos/{owner}/{repo}/pulls/{pull_number}/comments`) with HTTP `422` if the AI returns an absolute file line number that falls outside a modified unified diff hunk (`@@ -a,b +c,d @@`) or misses the head `commit_id`.
 - **Solution:** Implemented a unified diff hunk parser that extracts valid modified `RIGHT`-side line ranges per file and anchors reviews to the exact `head.sha` commit ID. Findings outside changed hunks gracefully fall back into the top-level PR Review summary body instead of failing the submission.
 
