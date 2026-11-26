@@ -46,7 +46,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 
 ---
 
-## Engineering Challenges, Issues Faced & How They Were Solved
+#### Engineering Challenges, Issues Faced & How They Were Solved
 
 ### 1. Hugging Face Spaces Docker Port Binding & Container Runtime Mismatch
 - **Issue:** Local development and AI Studio previews bind to port `3000`, whereas Hugging Face Spaces (`sdk: docker`) strictly routes external traffic to `app_port: 7860` and runs containers under an unprivileged non-root UID (`1000`). Hardcoded ports or `localhost`-only bindings caused **502 / Space Unhealthy** startup failures.
