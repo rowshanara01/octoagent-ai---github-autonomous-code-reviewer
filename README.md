@@ -64,7 +64,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 - **Issue:** Pull Requests containing dependency updates (`bun.lock`, `package-lock.json`, minified assets, or `dist/` bundles) exhausted Gemini context limits, spiked latency, and caused malformed or truncated JSON responses.
 - **Solution:** Built a deterministic diff filter that excludes lockfiles, binary assets, and generated build folders before prompt assembly, paired with strict Gemini `responseSchema` structured JSON enforcement so every agent returns deterministic, UI-safe review objects.
 
-### 5. API Key Exposure & Browser CORS Restrictions on Private Repos
+#### 5. API Key Exposure & Browser CORS Restrictions on Private Repos
 - **Issue:** Fetching private GitHub diffs or calling Gemini directly from client-side React code risks exposing `GEMINI_API_KEY` in browser bundles and triggers CORS blocks on authenticated GitHub API endpoints.
 - **Solution:** Routed AI inference and GitHub API requests through server-side proxy endpoints, isolating `GEMINI_API_KEY` inside server environment secrets (`.env` / Hugging Face **Secrets**) and handling GitHub tokens strictly in memory per session without persisting credentials to disk.
 
