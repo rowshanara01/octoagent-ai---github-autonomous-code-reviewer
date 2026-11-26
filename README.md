@@ -15,7 +15,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 
 ---
 
-## Core Architecture & Multi-Agent Swarm Pipeline
+#### Core Architecture & Multi-Agent Swarm Pipeline
 
     [GitHub PR / Commit / File URL]
                   │
