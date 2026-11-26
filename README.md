@@ -56,7 +56,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 - **Issue:** GitHub's Pull Request Review API rejects inline comments (`POST /repos/{owner}/{repo}/pulls/{pull_number}/comments`) with HTTP `422` if the AI returns an absolute file line number that falls outside a modified unified diff hunk (`@@ -a,b +c,d @@`) or misses the head `commit_id`.
 - **Solution:** Implemented a unified diff hunk parser that extracts valid modified `RIGHT`-side line ranges per file and anchors reviews to the exact `head.sha` commit ID. Findings outside changed hunks gracefully fall back into the top-level PR Review summary body instead of failing the submission.
 
-### 3. Self-Review Verdict Restriction on GitHub API (`APPROVE` Error)
+#### 3. Self-Review Verdict Restriction on GitHub API (`APPROVE` Error)
 - **Issue:** GitHub enforces a repository rule blocking users from submitting an `APPROVE` or `REQUEST_CHANGES` verdict on their own Pull Requests when authenticating with their own Personal Access Token (`422: Can not approve your own pull request`).
 - **Solution:** Added defensive error handling and pre-check logic that detects self-authored PRs or restricted permissions and cleanly falls back to `COMMENT` verdict publishing while preserving all inline code suggestions.
 
