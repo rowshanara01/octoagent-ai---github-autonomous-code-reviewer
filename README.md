@@ -37,7 +37,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 
 ---
 
-## Key Features
+#### Key Features
 - **Multi-Agent Review Swarm:** Parallel domain analysis across SecOps, Performance, Clean Code, and QA specialists with severity scoring (`CRITICAL`, `HIGH`, `MEDIUM`, `LOW`).
 - **GitHub PR, Commit & File Integration:** Inspects both public and private GitHub repositories, branches, pull requests, and individual source files.
 - **1-Click GitHub Inline Comments & Patch Suggestions:** Publishes formal review verdicts (`APPROVE`, `REQUEST_CHANGES`, `COMMENT`) and inline GitHub suggestion blocks directly onto the PR diff.
