@@ -83,7 +83,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 
 ---
 
-## Repository Structure
+#### Repository Structure
 
     octoagent-ai---github-autonomous-code-reviewer/
     ├── src/                     # TypeScript React UI, Multi-Agent Swarm views & Remediation Chat
