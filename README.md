@@ -1,7 +1,7 @@
 #### title: OctoAgent AI - Autonomous GitHub Code Reviewer
 emoji: 🤖
 colorFrom: indigo
-colorTo: slate
+colorTo: slates
 sdk: docker
 app_port: 7860
 pinned: false
