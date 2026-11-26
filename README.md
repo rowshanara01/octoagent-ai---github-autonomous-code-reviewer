@@ -60,7 +60,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 - **Issue:** GitHub enforces a repository rule blocking users from submitting an `APPROVE` or `REQUEST_CHANGES` verdict on their own Pull Requests when authenticating with their own Personal Access Token (`422: Can not approve your own pull request`).
 - **Solution:** Added defensive error handling and pre-check logic that detects self-authored PRs or restricted permissions and cleanly falls back to `COMMENT` verdict publishing while preserving all inline code suggestions.
 
-### 4. Large PR Token Overflow & Lockfile Noise in LLM Context
+#### 4. Large PR Token Overflow & Lockfile Noise in LLM Context
 - **Issue:** Pull Requests containing dependency updates (`bun.lock`, `package-lock.json`, minified assets, or `dist/` bundles) exhausted Gemini context limits, spiked latency, and caused malformed or truncated JSON responses.
 - **Solution:** Built a deterministic diff filter that excludes lockfiles, binary assets, and generated build folders before prompt assembly, paired with strict Gemini `responseSchema` structured JSON enforcement so every agent returns deterministic, UI-safe review objects.
 
