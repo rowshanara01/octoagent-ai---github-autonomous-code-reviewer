@@ -68,7 +68,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 - **Issue:** Fetching private GitHub diffs or calling Gemini directly from client-side React code risks exposing `GEMINI_API_KEY` in browser bundles and triggers CORS blocks on authenticated GitHub API endpoints.
 - **Solution:** Routed AI inference and GitHub API requests through server-side proxy endpoints, isolating `GEMINI_API_KEY` inside server environment secrets (`.env` / Hugging Face **Secrets**) and handling GitHub tokens strictly in memory per session without persisting credentials to disk.
 
-### 6. Docker Image Bloat & Slow Cloud Rebuilds
+#### 6. Docker Image Bloat & Slow Cloud Rebuilds
 - **Issue:** Copying `node_modules`, build caches, local environment files, or large artifact directories into the Docker build context slowed Hugging Face Spaces rebuilds and risked layer bloat.
 - **Solution:** Configured `.dockerignore` to exclude `.git`, `node_modules`, `dist`, and local `.env` files, and structured `Dockerfile` layers to install dependencies before copying application source code for optimal build caching.
 
