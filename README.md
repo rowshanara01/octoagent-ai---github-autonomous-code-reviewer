@@ -98,7 +98,7 @@ It orchestrates a specialized 4-agent engineering swarm to audit security vulner
 
 ---
 
-## Hugging Face Spaces Deployment Configuration
+#### Hugging Face Spaces Deployment Configuration
 - **SDK:** `docker`
 - **Port:** `7860`
 - **Environment Variables Required:**
